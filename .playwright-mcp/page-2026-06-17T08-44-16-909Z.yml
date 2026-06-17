@@ -1,0 +1,7 @@
+- generic [ref=e3]:
+  - heading "Supabase 通路验证" [level=2] [ref=e4]
+  - generic [ref=e5]:
+    - textbox "输入测试消息..." [ref=e6]
+    - button "写入" [ref=e7]
+  - heading "最近记录（health_check 表）" [level=3] [ref=e8]
+  - paragraph [ref=e9]: 暂无记录，写一条试试
