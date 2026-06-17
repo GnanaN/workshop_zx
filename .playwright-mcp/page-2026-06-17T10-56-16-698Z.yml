@@ -1,0 +1,25 @@
+- generic [ref=e3]:
+  - complementary [ref=e4]:
+    - heading "Lensmor" [level=2] [ref=e6]
+    - navigation [ref=e7]:
+      - generic [ref=e8] [cursor=pointer]: 竞品
+      - generic [ref=e9] [cursor=pointer]: 收件箱
+    - generic [ref=e11]:
+      - generic [ref=e22]:
+        - generic [ref=e23]: 我的竞品
+        - generic [ref=e24]: "0"
+      - paragraph [ref=e25]: 暂无竞品
+    - button "+ 添加竞品" [ref=e13] [cursor=pointer]
+  - main [ref=e14]:
+    - button "退出登录" [ref=e16] [cursor=pointer]
+    - generic [ref=e19]:
+      - heading "欢迎，nana_ga@126.com" [level=2] [ref=e26]
+      - paragraph [ref=e21]: 点击左下角「添加竞品」开始监控你的第一个竞争对手。
+  - generic [ref=e28]:
+    - heading "添加竞品" [level=3] [ref=e29]
+    - textbox "竞品名称" [ref=e30]: 特斯拉中国
+    - textbox "域名（如 example.com）" [ref=e31]: tesla.cn
+    - paragraph [ref=e35]: insert or update on table "competitors" violates foreign key constraint "competitors_user_id_fkey"
+    - generic [ref=e32]:
+      - button "取消" [ref=e33] [cursor=pointer]
+      - button "添加" [ref=e34] [cursor=pointer]

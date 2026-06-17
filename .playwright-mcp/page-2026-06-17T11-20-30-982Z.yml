@@ -1,0 +1,47 @@
+- generic [ref=e3]:
+  - complementary [ref=e4]:
+    - heading "Lensmor" [level=2] [ref=e6]
+    - navigation [ref=e7]:
+      - generic [ref=e8] [cursor=pointer]: 竞品
+      - generic [ref=e9] [cursor=pointer]: 收件箱
+    - generic [ref=e11]:
+      - generic [ref=e22]:
+        - generic [ref=e23]: 我的竞品
+        - generic [ref=e24]: "3"
+      - generic [ref=e25] [cursor=pointer]:
+        - generic [ref=e26]: Test
+        - generic [ref=e27]: httpbin.org
+        - text: 监控中
+      - generic [ref=e28] [cursor=pointer]:
+        - generic [ref=e29]: 百度
+        - generic [ref=e30]: baidu.com
+        - text: 监控中
+      - generic [ref=e31] [cursor=pointer]:
+        - generic [ref=e32]: 特斯拉中国
+        - generic [ref=e33]: tesla.cn
+        - text: 监控中
+    - button "+ 添加竞品" [ref=e13] [cursor=pointer]
+  - main [ref=e14]:
+    - button "退出登录" [ref=e16] [cursor=pointer]
+    - generic [ref=e35]:
+      - generic [ref=e36]:
+        - heading "百度" [level=1] [ref=e37]
+        - generic [ref=e38]:
+          - link "baidu.com" [ref=e39] [cursor=pointer]:
+            - /url: https://baidu.com
+          - generic [ref=e40]: 监控中
+          - button "编辑" [ref=e41] [cursor=pointer]
+          - button "暂停" [ref=e42] [cursor=pointer]
+          - button "立即刷新" [ref=e43] [cursor=pointer]
+      - generic [ref=e44]:
+        - heading "公司基本面" [level=3] [ref=e45]
+        - generic [ref=e46]:
+          - generic [ref=e47]:
+            - text: title
+            - generic [ref=e48]: —
+          - generic [ref=e49]:
+            - text: last_scraped
+            - generic [ref=e50]: 2026-06-17T11:08:29.215Z
+      - generic [ref=e51]:
+        - heading "最新情报" [level=3] [ref=e52]
+        - paragraph [ref=e53]: 暂无分析报告。添加竞品后系统将自动采集和分析。

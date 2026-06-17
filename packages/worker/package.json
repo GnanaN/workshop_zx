@@ -1,0 +1,22 @@
+{
+  "name": "@lensmor/worker",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@lensmor/shared": "*",
+    "@supabase/supabase-js": "^2.108.2",
+    "cheerio": "^1.0.0",
+    "puppeteer": "^22.10.0",
+    "turndown": "^7.1.0",
+    "ws": "^8.21.0"
+  },
+  "devDependencies": {
+    "@types/ws": "^8.18.1",
+    "tsx": "^4.11.0"
+  }
+}

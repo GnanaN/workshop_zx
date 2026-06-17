@@ -1,0 +1,24 @@
+- generic [ref=e3]:
+  - complementary [ref=e4]:
+    - heading "Lensmor" [level=2] [ref=e6]
+    - navigation [ref=e7]:
+      - generic [ref=e8] [cursor=pointer]: 竞品
+      - generic [ref=e9] [cursor=pointer]: 收件箱
+    - generic [ref=e36]:
+      - generic [ref=e37]:
+        - generic [ref=e38]: 我的竞品
+        - generic [ref=e39]: "2"
+      - generic [ref=e40] [cursor=pointer]:
+        - generic [ref=e41]: 百度
+        - generic [ref=e42]: baidu.com
+        - text: 监控中
+      - generic [ref=e43] [cursor=pointer]:
+        - generic [ref=e44]: 特斯拉中国
+        - generic [ref=e45]: tesla.cn
+        - text: 采集中
+    - button "+ 添加竞品" [ref=e13] [cursor=pointer]
+  - main [ref=e14]:
+    - button "退出登录" [ref=e16] [cursor=pointer]
+    - generic [ref=e19]:
+      - heading "欢迎，nana_ga@126.com" [level=2] [ref=e20]
+      - paragraph [ref=e21]: 点击左侧竞品查看详情情报。
