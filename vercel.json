@@ -3,6 +3,13 @@
   "outputDirectory": "packages/web/dist",
   "installCommand": "npm install",
   "rewrites": [
+    { "source": "/api/(.*)", "destination": "/api/$1" },
     { "source": "/(.*)", "destination": "/index.html" }
+  ],
+  "crons": [
+    {
+      "path": "/api/process-jobs",
+      "schedule": "*/5 * * * *"
+    }
   ]
 }
