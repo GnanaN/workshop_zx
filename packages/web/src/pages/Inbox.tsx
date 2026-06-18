@@ -52,6 +52,9 @@ export function InboxPage() {
         })));
       }
       setLoading(false);
+    }).catch((err) => {
+      setError(err?.message || '网络请求失败');
+      setLoading(false);
     });
   }, []);
 

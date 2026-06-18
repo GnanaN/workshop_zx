@@ -43,6 +43,9 @@ export function ReportDetailPage() {
         });
       }
       setLoading(false);
+    }).catch((err) => {
+      console.error('加载报告失败:', err);
+      setLoading(false);
     });
   }, [reportId]);
 

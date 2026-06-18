@@ -15,7 +15,7 @@ export function InboxFilters({ priority, onPriorityChange, competitorId, onCompe
         style={{ padding: '8px 12px', border: '1px solid #d9d9d9', borderRadius: 6, fontSize: 13, background: '#fff' }}
       >
         <option value="">全部优先级</option>
-        <option value="high">高优</option>
+        <option value="urgent">高优</option>
         <option value="medium">中优</option>
         <option value="low">低优</option>
       </select>

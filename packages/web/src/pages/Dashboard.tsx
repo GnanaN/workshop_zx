@@ -5,11 +5,19 @@ import { useAuth } from '../hooks/useAuth';
 export function DashboardPage() {
   const { session } = useAuth();
   const [hasCompetitors, setHasCompetitors] = useState<boolean | null>(null);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    supabase.from('competitors').select('id', { count: 'exact', head: true }).then(({ count }) => {
-      setHasCompetitors((count || 0) > 0);
-    });
+    supabase.from('competitors').select('id', { count: 'exact', head: true }).then(
+      ({ count, error: err }) => {
+        if (err) { setError(err.message); setHasCompetitors(false); }
+        else { setHasCompetitors((count || 0) > 0); }
+      },
+      (err: Error) => {
+        setError(err.message || '加载失败');
+        setHasCompetitors(false);
+      }
+    );
   }, []);
 
   return (
@@ -19,7 +27,8 @@ export function DashboardPage() {
           {session?.user?.email ? `欢迎，${session.user.email}` : '欢迎使用 Lensmor Monitor'}
         </h2>
         <p style={{ color: '#666', lineHeight: 1.6, fontSize: 14 }}>
-          {hasCompetitors === null ? '加载中...'
+          {error ? `加载失败：${error}`
+            : hasCompetitors === null ? '加载中...'
             : hasCompetitors ? '点击左侧竞品查看详情情报。'
               : '点击左下角「添加竞品」开始监控你的第一个竞争对手。'}
         </p>

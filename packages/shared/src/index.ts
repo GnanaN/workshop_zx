@@ -34,7 +34,7 @@ export interface AnalysisReport {
   id: string;
   competitorId: string;
   userId: string;
-  changeSummary: string[];
+  changeSummary: { title: string; summary: string }[];
   strategicIntent: string;
   actionSuggestions: { level: string; action: string; reason: string }[];
   priority: ReportPriority;

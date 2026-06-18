@@ -53,7 +53,7 @@ async function processJob(job: any) {
   }).eq('id', id);
 
   if (cleaned.hasChanged && cleaned.diffLines.length > 0) {
-    const priority = cleaned.diffLines.length > 20 ? 'high' : cleaned.diffLines.length > 10 ? 'medium' : 'low';
+    const priority = cleaned.diffLines.length > 20 ? 'urgent' : cleaned.diffLines.length > 10 ? 'medium' : 'low';
     const snippet = cleaned.diffLines.slice(0, 5).join('; ');
 
     await supabase.from('analysis_reports').insert({
