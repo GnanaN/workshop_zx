@@ -18,20 +18,27 @@ const STATUS_LABELS: Record<string, { text: string; color: string }> = {
 export function CompetitorSidebar() {
   const [competitors, setCompetitors] = useState<Competitor[]>([]);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
   const navigate = useNavigate();
 
   const fetchCompetitors = async () => {
-    const { data } = await supabase
-      .from('competitors')
-      .select('id,name,domain,status')
-      .order('created_at', { ascending: false });
-    setCompetitors(data || []);
+    try {
+      const { data, error: err } = await supabase
+        .from('competitors')
+        .select('id,name,domain,status')
+        .order('created_at', { ascending: false });
+      if (err) { setError(err.message); }
+      else { setCompetitors(data || []); }
+    } catch (e: any) {
+      setError(e?.message || '加载失败');
+    }
     setLoading(false);
   };
 
   useEffect(() => { fetchCompetitors(); }, []);
 
   if (loading) return <div style={{ padding: 16, color: '#999' }}>加载中...</div>;
+  if (error) return <div style={{ padding: 16, color: '#e74c3c', fontSize: 13 }}>加载失败：{error}</div>;
 
   return (
     <div style={{ padding: '12px 0' }}>

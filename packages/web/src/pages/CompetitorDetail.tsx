@@ -53,6 +53,9 @@ export function CompetitorDetailPage() {
         setReports(reps || []);
       }
       setLoading(false);
+    }).catch((err) => {
+      setError(err?.message || '网络请求失败');
+      setLoading(false);
     });
   }, [id]);
 
@@ -127,10 +130,10 @@ export function CompetitorDetailPage() {
                 <div style={{ display: 'flex', gap: 8, alignItems: 'center', marginBottom: 6 }}>
                   <span style={{
                     fontSize: 11, fontWeight: 600, padding: '1px 8px', borderRadius: 4,
-                    color: r.priority === 'high' ? '#e74c3c' : r.priority === 'medium' ? '#faad14' : '#52c41a',
-                    background: r.priority === 'high' ? '#fde8e8' : r.priority === 'medium' ? '#fef3cf' : '#e6f7e6',
+                    color: r.priority === 'urgent' ? '#e74c3c' : r.priority === 'medium' ? '#faad14' : '#52c41a',
+                    background: r.priority === 'urgent' ? '#fde8e8' : r.priority === 'medium' ? '#fef3cf' : '#e6f7e6',
                   }}>
-                    {r.priority === 'high' ? '高优' : r.priority === 'medium' ? '中优' : '低优'}
+                    {r.priority === 'urgent' ? '高优' : r.priority === 'medium' ? '中优' : '低优'}
                   </span>
                   <span style={{ fontSize: 12, color: '#999' }}>{new Date(r.created_at).toLocaleDateString('zh-CN')}</span>
                 </div>
